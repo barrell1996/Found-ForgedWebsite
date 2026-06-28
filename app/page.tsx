@@ -39,12 +39,11 @@ const values = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-stone-200 bg-[#15120f]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_45%,rgba(154,113,70,.45),transparent_28%),linear-gradient(90deg,#080706_0%,#16120e_38%,#3b2f24_100%)]" />
-        <div className="absolute inset-y-0 right-0 hidden w-2/3 opacity-70 lg:block">
-          <div className="h-full w-full bg-[linear-gradient(90deg,rgba(8,7,6,0)_0%,rgba(8,7,6,.2)_55%,rgba(8,7,6,.45)_100%)]" />
-        </div>
-        <div className="relative container-tight grid min-h-[520px] items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
+      <section className="relative min-h-[620px] overflow-hidden border-b border-stone-200 bg-[#15120f]">
+        <Image src="/brand/hero-approved.jpg" alt="Found & Forged trading room with curated vintage goods" fill className="object-cover object-center" priority sizes="100vw" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,7,6,.92)_0%,rgba(8,7,6,.76)_38%,rgba(8,7,6,.32)_68%,rgba(8,7,6,.62)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.38)_0%,rgba(0,0,0,0)_35%,rgba(0,0,0,.42)_100%)]" />
+        <div className="relative container-tight flex min-h-[620px] items-center px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-xl text-white">
             <h1 className="display-serif text-6xl font-black uppercase leading-[0.92] sm:text-7xl lg:text-8xl">
               Built On<br />Hard Work.
@@ -58,17 +57,9 @@ export default function Home() {
               Explore What We Do →
             </Link>
           </div>
-          <div>
-            <div className="relative ml-auto max-w-2xl rounded-none border border-white/10 bg-black/20 p-3 shadow-2xl backdrop-blur-[1px] sm:p-6">
-              <div className="relative aspect-[16/9] overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_55%_35%,#806144,#231912_55%,#0f0c09_100%)]">
-                <Image src="/brand/hero-approved.jpg" alt="Found & Forged trading room with curated vintage goods" fill className="object-cover" priority sizes="(min-width: 1024px) 672px, 100vw" />
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0)),radial-gradient(circle_at_72%_50%,rgba(255,216,153,.18),transparent_32%)]" />
-                <div className="absolute bottom-3 left-3 right-3 border border-white/15 bg-black/30 p-4 text-white backdrop-blur-sm sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.24em] text-[#d4b07b]">Found & Forged Trading Co.</p>
-                  <p className="mt-2 max-w-md text-sm leading-6 text-stone-200">A practical brand for home, property, curated finds, and goods made with care.</p>
-                </div>
-              </div>
-            </div>
+          <div className="absolute bottom-6 left-5 right-5 border-t border-white/20 pt-4 text-white sm:left-8 sm:right-8 lg:left-auto lg:right-12 lg:max-w-md">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#d4b07b]">Found & Forged Trading Co.</p>
+            <p className="mt-2 text-sm leading-6 text-stone-200">A practical brand for home, property, curated finds, and goods made with care.</p>
           </div>
         </div>
       </section>
