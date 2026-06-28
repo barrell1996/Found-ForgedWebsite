@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export function SectionHeader({
   eyebrow,
   title,
@@ -5,7 +7,7 @@ export function SectionHeader({
 }: {
   eyebrow: string;
   title: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }) {
   return (
     <div className="mb-8 max-w-3xl">
