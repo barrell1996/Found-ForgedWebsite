@@ -4,8 +4,12 @@
 
 :root {
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Arial Black", "Helvetica Neue", Arial, sans-serif;
-  --grid-line: rgba(95, 100, 104, 0.16);
+  --font-display: Georgia, "Times New Roman", serif;
+  --ink: #15120f;
+  --cream: #f6f1e8;
+  --paper: #fbf7ef;
+  --tan: #9a7146;
+  --line: #ded2bf;
 }
 
 * {
@@ -18,8 +22,8 @@ html {
 
 body {
   margin: 0;
-  color: #050505;
-  background: #f8f8f6;
+  color: var(--ink);
+  background: var(--cream);
   font-family: var(--font-sans);
 }
 
@@ -27,54 +31,72 @@ a {
   text-decoration: none;
 }
 
-.blueprint {
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-.fine-grid {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 22px 22px;
-}
-
 .section-pad {
-  @apply px-5 py-14 sm:px-8 lg:px-12 lg:py-20;
+  @apply px-5 py-12 sm:px-8 lg:px-12 lg:py-16;
 }
 
 .container-tight {
-  @apply mx-auto w-full max-w-6xl;
+  @apply mx-auto w-full max-w-7xl;
 }
 
 .eyebrow {
-  @apply text-xs font-black uppercase tracking-[0.22em] text-forged-steel;
+  @apply text-xs font-black uppercase tracking-[0.24em];
+  color: var(--tan);
+}
+
+.display-serif {
+  font-family: var(--font-display);
+  letter-spacing: -0.035em;
+}
+
+.script-line {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: var(--tan);
 }
 
 .button-primary {
-  @apply inline-flex min-h-12 items-center justify-center border border-forged-black bg-forged-black px-5 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-forged-charcoal;
+  @apply inline-flex min-h-12 items-center justify-center bg-[#15120f] px-6 text-xs font-black uppercase tracking-[0.18em] text-white transition hover:bg-[#2a2119];
 }
 
 .button-secondary {
-  @apply inline-flex min-h-12 items-center justify-center border border-forged-steel bg-white px-5 text-sm font-black uppercase tracking-[0.14em] text-forged-black transition hover:border-forged-black hover:bg-forged-smoke;
+  @apply inline-flex min-h-12 items-center justify-center border border-[#15120f] bg-transparent px-6 text-xs font-black uppercase tracking-[0.18em] text-[#15120f] transition hover:bg-[#15120f] hover:text-white;
 }
 
 .panel {
-  @apply border border-forged-concrete bg-white shadow-industrial;
+  @apply border border-stone-200 bg-[#fbf7ef] shadow-sm;
+}
+
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(10, 9, 8, 0.86) 0%, rgba(10, 9, 8, 0.58) 34%, rgba(10, 9, 8, 0.16) 70%);
+}
+
+.card-image-furniture {
+  background-image: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.1)), radial-gradient(circle at 30% 30%, #6f543b, #211913 65%);
+}
+
+.card-image-tools {
+  background-image: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.1)), radial-gradient(circle at 40% 35%, #5a4632, #19130f 68%);
+}
+
+.card-image-crocks {
+  background-image: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.1)), radial-gradient(circle at 50% 38%, #b7a48b, #2b2119 68%);
+}
+
+.card-image-americana {
+  background-image: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.1)), radial-gradient(circle at 35% 35%, #7b3d2a, #1b1410 70%);
 }
 
 .prose-industrial {
-  @apply max-w-none text-forged-charcoal;
+  @apply max-w-none text-[#15120f];
 }
 
 .prose-industrial h2 {
-  @apply mt-10 border-t border-forged-concrete pt-8 text-2xl font-black uppercase tracking-[0.04em] text-forged-black;
+  @apply mt-10 border-t border-stone-200 pt-8 text-2xl font-black uppercase tracking-[0.04em];
 }
 
 .prose-industrial h3 {
-  @apply mt-8 text-xl font-black text-forged-black;
+  @apply mt-8 text-xl font-black;
 }
 
 .prose-industrial p {
