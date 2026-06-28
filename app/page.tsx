@@ -23,10 +23,10 @@ const propertyServices = [
 ];
 
 const vintageFinds = [
-  { title: "Furniture & Decor", href: "/curated-goods", imageClass: "card-image-furniture" },
-  { title: "Vintage Tools", href: "/curated-goods", imageClass: "card-image-tools" },
-  { title: "Primitives & Crocks", href: "/curated-goods", imageClass: "card-image-crocks" },
-  { title: "Americana & Collectibles", href: "/curated-goods", imageClass: "card-image-americana" }
+  { title: "Furniture & Decor", href: "/curated-goods", image: "/brand/vintage-furniture.jpg" },
+  { title: "Vintage Tools", href: "/curated-goods", image: "/brand/vintage-tools.jpg" },
+  { title: "Primitives & Crocks", href: "/curated-goods", image: "/brand/vintage-crocks.jpg" },
+  { title: "Americana & Collectibles", href: "/curated-goods", image: "/brand/vintage-americana.jpg" }
 ];
 
 const values = [
@@ -114,7 +114,9 @@ export default function Home() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {vintageFinds.map((find) => (
               <Link key={find.title} href={find.href} className="group overflow-hidden border border-stone-200 bg-[#fbf7ef] shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                <div className={`${find.imageClass} aspect-[4/3] bg-cover bg-center`} />
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#211913]">
+                  <Image src={find.image} alt={find.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" />
+                </div>
                 <div className="p-5">
                   <h3 className="text-sm font-black uppercase tracking-[0.16em] text-[#15120f]">{find.title}</h3>
                   <p className="mt-3 text-xs font-bold uppercase tracking-[0.14em] text-[#7b5a38]">Browse →</p>
