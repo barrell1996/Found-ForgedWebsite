@@ -5,13 +5,13 @@ const propertyServices = [
   {
     title: "Gravel Driveways & Repair",
     href: "/gravel-driveway-rehabilitation",
-    image: "linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.18)), linear-gradient(135deg, #39513b, #1f261c 55%, #8b7a60)",
+    image: "/brand/service-gravel.jpg",
     icon: "▤"
   },
   {
     title: "Property Cleanup & Detailing",
     href: "/services",
-    image: "linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.18)), linear-gradient(135deg, #2f4e2d, #6f5b35 50%, #15120f)",
+    image: "/brand/service-cleanup.jpg",
     icon: "⌁"
   },
   {
@@ -80,7 +80,11 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-3">
             {propertyServices.map((service) => (
               <Link key={service.title} href={service.href} className="group overflow-hidden border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="aspect-[16/9] bg-cover bg-center" style={{ backgroundImage: service.image }} />
+                <div className="relative aspect-[16/9] overflow-hidden bg-cover bg-center" style={service.image.startsWith("/") ? undefined : { backgroundImage: service.image }}>
+                  {service.image.startsWith("/") ? (
+                    <Image src={service.image} alt={service.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(min-width: 768px) 33vw, 100vw" />
+                  ) : null}
+                </div>
                 <div className="grid grid-cols-[44px_1fr] gap-3 p-5">
                   <div className="text-3xl leading-none text-[#9a7146]">{service.icon}</div>
                   <div>
