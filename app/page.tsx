@@ -58,12 +58,12 @@ export default function Home() {
               Explore What We Do →
             </Link>
           </div>
-          <div className="hidden lg:block">
-            <div className="relative ml-auto max-w-2xl rounded-none border border-white/10 bg-black/20 p-6 shadow-2xl backdrop-blur-[1px]">
+          <div>
+            <div className="relative ml-auto max-w-2xl rounded-none border border-white/10 bg-black/20 p-3 shadow-2xl backdrop-blur-[1px] sm:p-6">
               <div className="relative aspect-[16/9] overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_55%_35%,#806144,#231912_55%,#0f0c09_100%)]">
                 <Image src="/brand/hero-approved.jpg" alt="Found & Forged trading room with curated vintage goods" fill className="object-cover" priority sizes="(min-width: 1024px) 672px, 100vw" />
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0)),radial-gradient(circle_at_72%_50%,rgba(255,216,153,.18),transparent_32%)]" />
-                <div className="absolute bottom-6 left-6 right-6 border border-white/15 bg-black/30 p-5 text-white backdrop-blur-sm">
+                <div className="absolute bottom-3 left-3 right-3 border border-white/15 bg-black/30 p-4 text-white backdrop-blur-sm sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
                   <p className="text-xs font-black uppercase tracking-[0.24em] text-[#d4b07b]">Found & Forged Trading Co.</p>
                   <p className="mt-2 max-w-md text-sm leading-6 text-stone-200">A practical brand for home, property, curated finds, and goods made with care.</p>
                 </div>
