@@ -17,7 +17,7 @@ const propertyServices = [
   {
     title: "Grading & Land Improvement",
     href: "/services",
-    image: "linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.18)), linear-gradient(135deg, #4c3f2d, #17120d 58%, #86755e)",
+    image: "/brand/service-grading.jpg",
     icon: "⚒"
   }
 ];
