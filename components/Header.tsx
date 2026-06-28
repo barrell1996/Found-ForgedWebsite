@@ -17,11 +17,11 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="Found & Forged home">
           <Image
-            src="/brand/found-forged-logo.svg"
+            src="/brand/found-forged-logo.jpeg"
             alt="Found & Forged logo"
             width={92}
             height={92}
-            className="h-16 w-16 rounded-full object-contain sm:h-20 sm:w-20"
+            className="h-16 w-16 rounded-full object-cover sm:h-20 sm:w-20"
             priority
           />
         </Link>
