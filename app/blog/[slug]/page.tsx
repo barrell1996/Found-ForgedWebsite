@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug, slugify } from "@/lib/blog";
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -67,7 +66,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             ))}
           </div>
           <div className="prose-industrial mt-10">
-            <MDXRemote source={withHeadingIds(post.body)} />
+            <MarkdownContent body={post.body} />
           </div>
         </div>
         <aside className="grid content-start gap-5">
@@ -91,6 +90,31 @@ export default async function BlogPostPage({ params }: PageProps) {
   );
 }
 
-function withHeadingIds(body: string) {
-  return body.replace(/^## (.*)$/gm, (_, text) => `<h2 id="${slugify(text)}">${text}</h2>`);
+function MarkdownContent({ body }: { body: string }) {
+  const blocks = body.trim().split(/\n{2,}/);
+
+  return (
+    <>
+      {blocks.map((block, index) => {
+        const trimmed = block.trim();
+        if (trimmed.startsWith("## ")) {
+          const text = trimmed.replace(/^## /, "");
+          return <h2 key={index} id={slugify(text)}>{text}</h2>;
+        }
+        if (trimmed.startsWith("### ")) {
+          return <h3 key={index}>{trimmed.replace(/^### /, "")}</h3>;
+        }
+        if (trimmed.startsWith("- ")) {
+          return (
+            <ul key={index}>
+              {trimmed.split("\n").map((item) => (
+                <li key={item}>{item.replace(/^- /, "")}</li>
+              ))}
+            </ul>
+          );
+        }
+        return <p key={index}>{trimmed}</p>;
+      })}
+    </>
+  );
 }
