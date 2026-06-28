@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --grid-line: rgba(95, 100, 104, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #050505;
+  background: #f8f8f6;
+  font-family: var(--font-sans);
+}
+
+a {
+  text-decoration: none;
+}
+
+.blueprint {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.fine-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.section-pad {
+  @apply px-5 py-14 sm:px-8 lg:px-12 lg:py-20;
+}
+
+.container-tight {
+  @apply mx-auto w-full max-w-6xl;
+}
+
+.eyebrow {
+  @apply text-xs font-black uppercase tracking-[0.22em] text-forged-steel;
+}
+
+.button-primary {
+  @apply inline-flex min-h-12 items-center justify-center border border-forged-black bg-forged-black px-5 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-forged-charcoal;
+}
+
+.button-secondary {
+  @apply inline-flex min-h-12 items-center justify-center border border-forged-steel bg-white px-5 text-sm font-black uppercase tracking-[0.14em] text-forged-black transition hover:border-forged-black hover:bg-forged-smoke;
+}
+
+.panel {
+  @apply border border-forged-concrete bg-white shadow-industrial;
+}
+
+.prose-industrial {
+  @apply max-w-none text-forged-charcoal;
+}
+
+.prose-industrial h2 {
+  @apply mt-10 border-t border-forged-concrete pt-8 text-2xl font-black uppercase tracking-[0.04em] text-forged-black;
+}
+
+.prose-industrial h3 {
+  @apply mt-8 text-xl font-black text-forged-black;
+}
+
+.prose-industrial p {
+  @apply mt-4 leading-8;
+}
+
+.prose-industrial ul {
+  @apply mt-4 list-disc space-y-2 pl-6;
+}
