@@ -151,9 +151,9 @@ export default function Home() {
           <div className="p-8 lg:p-12">
             <p className="eyebrow">Our Story</p>
             <h2 className="display-serif mt-3 text-3xl font-black leading-tight text-[#15120f]">More than a business.</h2>
-            <p className="script-line mt-1 text-2xl">It’s a way of life.</p>
+            <p className="script-line mt-1 text-2xl">Built to serve.</p>
             <p className="mt-4 text-sm leading-7 text-stone-700">
-              We’re Brennan & Taylor. This company is built on faith, family, and hard work. Every service we provide, every product we make, and every item we find is done with purpose and a standard you can count on.
+              Found & Forged was created with a simple mission: provide dependable property services, thoughtfully curated goods, and handcrafted products with a level of care that's becoming harder to find. We believe quality work, honest communication, and lasting relationships never go out of style—and that's the standard we bring to everything we do.
             </p>
             <Link href="/about" className="button-secondary mt-6">Meet Brennan & Taylor →</Link>
           </div>
