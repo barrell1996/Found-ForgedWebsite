@@ -157,8 +157,8 @@ export default function Home() {
             </p>
             <Link href="/about" className="button-secondary mt-6">Meet Brennan & Taylor →</Link>
           </div>
-          <div className="relative min-h-72 bg-[radial-gradient(circle_at_50%_35%,#8b6747,#211712_68%)]">
-            <Image src="/brand/found-forged-logo.svg" alt="Found & Forged leather mark" fill className="object-contain p-16 opacity-35" />
+          <div className="relative min-h-72 bg-[#211913]">
+            <Image src="/brand/FounderPhoto.jpg" alt="Brennan and Taylor, founders of Found & Forged" fill className="object-cover object-center" sizes="(min-width: 1024px) 33vw, 100vw" />
           </div>
         </div>
       </section>
