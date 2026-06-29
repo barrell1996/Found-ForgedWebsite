@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foundandforged.com"),
+  metadataBase: new URL("https://foundforgedco.com"),
   title: {
     default: "Found & Forged | Built for Home. Property. Life.",
     template: "%s | Found & Forged"
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Found & Forged",
     description: "Built for Home. Property. Life.",
-    url: "https://foundandforged.com",
+    url: "https://foundforgedco.com",
     siteName: "Found & Forged",
     images: ["/brand/found-forged-logo.jpeg"],
     locale: "en_US",
