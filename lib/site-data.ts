@@ -1,27 +1,42 @@
 export const services = [
   {
-    title: "Gravel Driveway Rehabilitation",
+    title: "Gravel Driveway Repair & Maintenance",
     href: "/gravel-driveway-rehabilitation",
-    summary: "Reclaim rutted, washed-out, pothole-heavy drives with grading, reshaping, and fresh aggregate planning."
+    summary: "Repair potholes, ruts, washouts, soft spots, loose gravel migration, and worn driveway surfaces across western Ohio."
   },
   {
-    title: "Driveway Grading",
-    href: "/services",
-    summary: "Cut washboards, restore crown, improve drainage, and create a cleaner driving surface."
+    title: "Driveway Grading & Crown Restoration",
+    href: "/driveway-grading",
+    summary: "Restore crown, smooth washboards, improve water shedding, and reshape gravel lanes before small problems become expensive."
   },
   {
-    title: "Gravel Spreading",
-    href: "/services",
-    summary: "Efficient spreading for driveways, pads, lanes, and practical property projects."
+    title: "Gravel Spreading & Redistribution",
+    href: "/gravel-spreading",
+    summary: "Spread new gravel or pull displaced stone back into the travel path for cleaner, safer, easier-to-maintain access."
   },
   {
-    title: "Box Blade Work",
-    href: "/services",
-    summary: "Rugged grading and surface work for small properties, lanes, and rough utility areas."
+    title: "Pothole & Washout Repair",
+    href: "/pothole-repair",
+    summary: "Fix recurring driveway potholes, low spots, washouts, and rough entrances with grading that addresses the cause."
+  },
+  {
+    title: "Culvert & Drainage Repair",
+    href: "/culvert-repair",
+    summary: "Improve driveway drainage around culverts, ditch lines, low crossings, and washed-out approaches."
+  },
+  {
+    title: "Finish Grading",
+    href: "/finish-grading",
+    summary: "Fine grade gravel pads, lanes, small work areas, and property surfaces so they drain and finish cleanly."
+  },
+  {
+    title: "Light Tractor & Box Blade Services",
+    href: "/light-tractor-services",
+    summary: "Light tractor work, box blade grading, driveway touch-ups, gravel movement, and practical small-property projects."
   },
   {
     title: "Small Property Improvement Projects",
-    href: "/services",
+    href: "/services#property-projects",
     summary: "Focused improvements that make a property cleaner, more usable, and easier to maintain."
   }
 ];
