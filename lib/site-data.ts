@@ -1,23 +1,33 @@
 export const services = [
   {
-    title: "Gravel Driveway Repair & Maintenance",
-    href: "/gravel-driveway-rehabilitation",
-    summary: "Repair potholes, ruts, washouts, soft spots, loose gravel migration, and worn driveway surfaces across western Ohio."
+    title: "Gravel Driveway Repair",
+    href: "/gravel-driveway-repair",
+    summary: "Repair potholes, ruts, washouts, soft spots, rough entrances, loose gravel migration, and worn driveway surfaces across western Ohio."
   },
   {
-    title: "Driveway Grading & Crown Restoration",
-    href: "/driveway-grading",
+    title: "Gravel Driveway Grading",
+    href: "/gravel-driveway-grading",
     summary: "Restore crown, smooth washboards, improve water shedding, and reshape gravel lanes before small problems become expensive."
-  },
-  {
-    title: "Gravel Spreading & Redistribution",
-    href: "/gravel-spreading",
-    summary: "Spread new gravel or pull displaced stone back into the travel path for cleaner, safer, easier-to-maintain access."
   },
   {
     title: "Pothole & Washout Repair",
     href: "/pothole-repair",
     summary: "Fix recurring driveway potholes, low spots, washouts, and rough entrances with grading that addresses the cause."
+  },
+  {
+    title: "Gravel Redistribution",
+    href: "/gravel-redistribution",
+    summary: "Pull displaced stone back into the travel path, clean up shoulders, reduce ridges, and improve existing gravel coverage."
+  },
+  {
+    title: "Gravel Spreading",
+    href: "/gravel-spreading",
+    summary: "Spread new gravel or blend existing stone for cleaner, safer, easier-to-maintain driveways, lanes, and pads."
+  },
+  {
+    title: "Gravel Delivery Planning",
+    href: "/gravel-delivery",
+    summary: "Plan gravel quantity, prepare the surface before delivery, and spread or shape material after it arrives."
   },
   {
     title: "Culvert & Drainage Repair",
@@ -35,9 +45,9 @@ export const services = [
     summary: "Light tractor work, box blade grading, driveway touch-ups, gravel movement, and practical small-property projects."
   },
   {
-    title: "Small Property Improvement Projects",
-    href: "/services#property-projects",
-    summary: "Focused improvements that make a property cleaner, more usable, and easier to maintain."
+    title: "Property Maintenance Plans",
+    href: "/property-maintenance-plans",
+    summary: "Plan seasonal grading, pothole prevention, culvert checks, gravel upkeep, and small property maintenance visits."
   }
 ];
 
