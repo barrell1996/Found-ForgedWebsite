@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const contactEmail = "hello@foundforgedco.com";
+
 export function Footer() {
   return (
     <footer className="fine-grid bg-forged-black text-white">
@@ -16,6 +18,9 @@ export function Footer() {
           <p className="max-w-sm text-sm leading-7 text-forged-concrete">
             Premium practical-property services, guides, calculators, and durable ideas for the work around home.
           </p>
+          <a href={`mailto:${contactEmail}`} className="mt-5 inline-block text-sm font-black text-white underline decoration-forged-rust underline-offset-4 hover:text-forged-rust">
+            {contactEmail}
+          </a>
         </div>
         <div className="grid gap-8 sm:grid-cols-3">
           <FooterGroup title="Headquarters" links={[["Services", "/services"], ["Digital Products", "/digital-products"], ["Quote Request", "/contact"]]} />
@@ -24,7 +29,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-forged-silver">
-        Built for Home. Property. Life.
+        Built for Home. Property. Life. · <a href={`mailto:${contactEmail}`} className="hover:text-white">{contactEmail}</a>
       </div>
     </footer>
   );
