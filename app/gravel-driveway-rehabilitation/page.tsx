@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd, breadcrumbJsonLd, canonicalUrl } from "@/components/JsonLd";
 
 const signs = ["Recurring potholes", "Standing water", "Rutted travel lanes", "Washed-out edges", "Loose aggregate pushed aside", "No visible crown", "Soft spots near the entrance", "Rough ride after heavy rain"];
 const related = [
@@ -13,10 +14,15 @@ export const metadata: Metadata = {
   title: "Gravel Driveway Repair & Maintenance in Western Ohio",
   description:
     "Gravel driveway repair, maintenance, grading, pothole repair, gravel redistribution, washout repair, and drainage help for western Ohio properties.",
+  alternates: {
+    canonical: "/gravel-driveway-rehabilitation"
+  },
   openGraph: {
     title: "Gravel Driveway Repair & Maintenance | Found & Forged",
     description:
-      "Repair potholes, ruts, washouts, drainage problems, and loose gravel migration with practical gravel driveway rehabilitation."
+      "Repair potholes, ruts, washouts, drainage problems, and loose gravel migration with practical gravel driveway rehabilitation.",
+    url: "/gravel-driveway-rehabilitation",
+    type: "website"
   }
 };
 
@@ -24,17 +30,25 @@ export default function GravelDrivewayPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${canonicalUrl("/gravel-driveway-rehabilitation")}#service`,
     name: "Gravel Driveway Repair and Maintenance",
-    provider: { "@type": "LocalBusiness", name: "Found & Forged Property Services" },
+    provider: { "@id": `${canonicalUrl()}#business` },
     areaServed: "Western Ohio",
-    serviceType: "Gravel driveway repair, grading, pothole repair, and maintenance",
-    url: "https://foundforgedco.com/gravel-driveway-rehabilitation",
+    serviceType: "Gravel driveway repair, grading, pothole repair, gravel redistribution, washout repair, and maintenance",
+    url: canonicalUrl("/gravel-driveway-rehabilitation"),
+    description:
+      "Repair potholes, ruts, washouts, drainage issues, loose gravel migration, and rough gravel driveway surfaces with practical grading and maintenance.",
     offers: { "@type": "Offer", availability: "https://schema.org/InStock", priceCurrency: "USD" }
   };
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Gravel Driveway Repair", path: "/gravel-driveway-rehabilitation" }
+  ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <JsonLd data={[schema, breadcrumbSchema]} />
       <section className="section-pad bg-[#15120f] text-white">
         <div className="container-tight">
           <p className="eyebrow text-[#d4b07b]">Core Property Service</p>
