@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
+import { JsonLd, breadcrumbJsonLd, canonicalUrl } from "@/components/JsonLd";
 import { services } from "@/lib/site-data";
 
 const problems = [
@@ -18,36 +19,53 @@ export const metadata: Metadata = {
   title: "Gravel Driveway Repair, Grading & Light Tractor Services in Western Ohio",
   description:
     "Found & Forged provides gravel driveway maintenance, repair, grading, pothole repair, gravel spreading, culvert repair, finish grading, and light tractor services in western Ohio.",
+  alternates: {
+    canonical: "/services"
+  },
   openGraph: {
     title: "Western Ohio Gravel Driveway Repair & Property Services | Found & Forged",
     description:
-      "Request an estimate for gravel driveway repair, grading, pothole repair, gravel redistribution, culvert repair, finish grading, and light tractor services."
+      "Request an estimate for gravel driveway repair, grading, pothole repair, gravel redistribution, culvert repair, finish grading, and light tractor services.",
+    url: "/services",
+    type: "website"
   }
 };
 
 export default function ServicesPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Found & Forged Property Services",
-    url: "https://foundforgedco.com/services",
-    image: "https://foundforgedco.com/brand/service-gravel.jpg",
+    "@type": "Service",
+    "@id": `${canonicalUrl("/services")}#service`,
+    name: "Gravel Driveway Repair, Grading and Light Tractor Services",
+    url: canonicalUrl("/services"),
+    image: canonicalUrl("/brand/service-gravel.jpg"),
     areaServed: "Western Ohio",
+    provider: { "@id": `${canonicalUrl()}#business` },
     description:
       "Gravel driveway maintenance, gravel driveway repair, driveway grading, pothole repair, gravel spreading, culvert repair, finish grading, and light tractor services.",
-    makesOffer: services.map((service) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: service.title,
-        url: `https://foundforgedco.com${service.href}`
-      }
-    }))
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Found & Forged Property Services",
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          url: canonicalUrl(service.href),
+          description: service.summary
+        }
+      }))
+    }
   };
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" }
+  ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <JsonLd data={[serviceSchema, breadcrumbSchema]} />
       <section className="section-pad bg-[#15120f] text-white">
         <div className="container-tight grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
