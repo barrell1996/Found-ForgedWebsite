@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BlogSearch } from "@/components/BlogSearch";
+import { JsonLd, breadcrumbJsonLd, canonicalUrl } from "@/components/JsonLd";
 import { SectionHeader } from "@/components/SectionHeader";
 import { categories } from "@/lib/site-data";
 import { getAllPosts, slugify } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Knowledge Center / Blog",
-  description: "Found & Forged articles on gravel driveways, property maintenance, DIY projects, decks, equipment, plans, and behind-the-brand updates.",
+  title: "Found & Forged Blog | Gravel Driveway, Property & DIY Guides",
+  description: "Read practical Found & Forged articles on gravel driveways, property maintenance, DIY projects, deck planning, tractor tips, equipment, digital plans, and local property work.",
+  alternates: {
+    canonical: "/blog"
+  },
   openGraph: {
-    title: "Found & Forged Knowledge Center",
-    description: "Practical property articles, guides, and field notes."
+    title: "Found & Forged Blog | Practical Property Guides",
+    description: "Gravel driveway, property maintenance, DIY, tractor, equipment, deck planning, and behind-the-brand articles.",
+    url: "/blog",
+    type: "website"
   }
 };
 
@@ -18,9 +24,30 @@ export default function BlogPage() {
   const posts = getAllPosts();
   const featured = posts.find((post) => post.featured) ?? posts[0];
   const popular = posts.filter((post) => post.popular);
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${canonicalUrl("/blog")}#blog`,
+    name: "Found & Forged Blog",
+    url: canonicalUrl("/blog"),
+    description: "Practical property, gravel driveway, DIY, equipment, and Found & Forged field notes.",
+    publisher: { "@id": `${canonicalUrl()}#business` },
+    blogPost: posts.slice(0, 10).map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: canonicalUrl(`/blog/${post.slug}`),
+      datePublished: post.date,
+      description: post.description
+    }))
+  };
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" }
+  ]);
 
   return (
     <section className="section-pad bg-forged-smoke">
+      <JsonLd data={[blogSchema, breadcrumbSchema]} />
       <div className="container-tight">
         <SectionHeader eyebrow="Knowledge Center" title="Practical articles for property work." />
         {featured && (
