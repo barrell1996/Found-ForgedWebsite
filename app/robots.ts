@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://foundandforged.com/sitemap.xml"
+    sitemap: "https://foundforgedco.com/sitemap.xml"
   };
 }
