@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts, slugify } from "@/lib/blog";
 import { categories } from "@/lib/site-data";
 
-const base = "https://foundandforged.com";
+const base = "https://foundforgedco.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
