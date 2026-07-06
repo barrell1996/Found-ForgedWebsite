@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd, breadcrumbJsonLd, canonicalUrl } from "@/components/JsonLd";
 import { getAllPosts, getPostBySlug, slugify } from "@/lib/blog";
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -14,13 +15,30 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${post.slug}`
+    },
     openGraph: {
       title: post.title,
       description: post.description,
+      url: `/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
+      images: [
+        {
+          url: "/brand/found-forged-logo.jpeg",
+          width: 1200,
+          height: 1200,
+          alt: "Found & Forged logo"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
       images: ["/brand/found-forged-logo.jpeg"]
     }
   };
@@ -33,16 +51,27 @@ export default async function BlogPostPage({ params }: PageProps) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${canonicalUrl(`/blog/${post.slug}`)}#article`,
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Organization", name: post.author },
-    publisher: { "@type": "Organization", name: "Found & Forged" }
+    dateModified: post.date,
+    mainEntityOfPage: canonicalUrl(`/blog/${post.slug}`),
+    image: canonicalUrl("/brand/found-forged-logo.jpeg"),
+    author: { "@type": "Organization", name: post.author, url: canonicalUrl() },
+    publisher: { "@id": `${canonicalUrl()}#business` },
+    articleSection: post.category,
+    keywords: post.tags.join(", ")
   };
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" },
+    { name: post.title, path: `/blog/${post.slug}` }
+  ]);
 
   return (
     <article className="section-pad bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <JsonLd data={[articleSchema, breadcrumbSchema]} />
       <div className="container-tight grid gap-10 lg:grid-cols-[240px_1fr_260px]">
         <aside className="hidden lg:block">
           <div className="sticky top-28 border-l border-forged-concrete pl-4">
