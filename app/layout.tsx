@@ -30,9 +30,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Found & Forged" }],
   creator: "Found & Forged",
   publisher: "Found & Forged",
-  alternates: {
-    canonical: "/"
-  },
   robots: {
     index: true,
     follow: true,
