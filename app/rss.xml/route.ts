@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 export const dynamic = "force-static";
 
 export function GET() {
-  const base = "https://foundandforged.com";
+  const base = "https://foundforgedco.com";
   const posts = getAllPosts();
   const items = posts
     .map(
