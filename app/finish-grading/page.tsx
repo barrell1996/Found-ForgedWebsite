@@ -6,7 +6,8 @@ const projects = ["Gravel pads", "Driveway tie-ins", "Small lanes", "Parking are
 export const metadata: Metadata = {
   title: "Finish Grading Services in Western Ohio",
   description: "Finish grading for gravel pads, lanes, driveway tie-ins, small parking areas, and practical property improvements in western Ohio.",
-  openGraph: { title: "Finish Grading in Western Ohio | Found & Forged", description: "Fine-grade small property surfaces, gravel pads, driveways, and access areas for cleaner drainage and better usability." }
+  alternates: { canonical: "/finish-grading" },
+  openGraph: { title: "Finish Grading in Western Ohio | Found & Forged", description: "Fine-grade small property surfaces, gravel pads, driveways, and access areas for cleaner drainage and better usability.", url: "/finish-grading", type: "website" }
 };
 
 export default function FinishGradingPage() {
