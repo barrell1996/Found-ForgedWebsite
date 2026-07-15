@@ -6,7 +6,8 @@ const issues = ["Washed-out culvert ends", "Rough driveway entrance", "Water cro
 export const metadata: Metadata = {
   title: "Driveway Culvert Repair & Drainage Help in Western Ohio",
   description: "Driveway culvert repair and drainage improvement in western Ohio for washed-out entrances, erosion, ditch flow, and gravel driveway water problems.",
-  openGraph: { title: "Driveway Culvert Repair in Western Ohio | Found & Forged", description: "Improve driveway entrances, culvert approaches, gravel washouts, and water movement around rural driveways." }
+  alternates: { canonical: "/culvert-repair" },
+  openGraph: { title: "Driveway Culvert Repair in Western Ohio | Found & Forged", description: "Improve driveway entrances, culvert approaches, gravel washouts, and water movement around rural driveways.", url: "/culvert-repair", type: "website" }
 };
 
 export default function CulvertRepairPage() {
