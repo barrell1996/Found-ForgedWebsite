@@ -128,22 +128,43 @@ function MarkdownContent({ body }: { body: string }) {
         const trimmed = block.trim();
         if (trimmed.startsWith("## ")) {
           const text = trimmed.replace(/^## /, "");
-          return <h2 key={index} id={slugify(text)}>{text}</h2>;
+          return <h2 key={index} id={slugify(text)}>{renderInlineLinks(text)}</h2>;
         }
         if (trimmed.startsWith("### ")) {
-          return <h3 key={index}>{trimmed.replace(/^### /, "")}</h3>;
+          return <h3 key={index}>{renderInlineLinks(trimmed.replace(/^### /, ""))}</h3>;
         }
         if (trimmed.startsWith("- ")) {
           return (
             <ul key={index}>
-              {trimmed.split("\n").map((item) => (
-                <li key={item}>{item.replace(/^- /, "")}</li>
-              ))}
+              {trimmed.split("\n").map((item) => {
+                const text = item.replace(/^- /, "");
+                return <li key={item}>{renderInlineLinks(text)}</li>;
+              })}
             </ul>
           );
         }
-        return <p key={index}>{trimmed}</p>;
+        return <p key={index}>{renderInlineLinks(trimmed)}</p>;
       })}
     </>
   );
+}
+
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+
+  return parts.map((part, index) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+
+    const [, label, href] = match;
+    if (href.startsWith("/")) {
+      return <Link key={`${href}-${index}`} href={href}>{label}</Link>;
+    }
+
+    return (
+      <a key={`${href}-${index}`} href={href} rel="noopener noreferrer" target="_blank">
+        {label}
+      </a>
+    );
+  });
 }
