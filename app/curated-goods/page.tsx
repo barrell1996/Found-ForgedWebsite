@@ -5,7 +5,16 @@ import { curatedGoods } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Curated Goods",
-  description: "Vintage finds, resale pieces, restored items, and practical home, shop, and property goods curated by Found & Forged."
+  description: "Vintage finds, resale pieces, restored items, and practical home, shop, and property goods curated by Found & Forged.",
+  alternates: {
+    canonical: "/curated-goods"
+  },
+  openGraph: {
+    title: "Curated Goods | Found & Forged",
+    description: "Vintage finds, resale pieces, restored items, and practical home, shop, and property goods curated by Found & Forged.",
+    url: "/curated-goods",
+    type: "website"
+  }
 };
 
 export default function CuratedGoodsPage() {
