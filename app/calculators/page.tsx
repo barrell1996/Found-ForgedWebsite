@@ -4,7 +4,16 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
   title: "Free Calculators",
-  description: "Free calculators for gravel, driveway gravel, deck materials, concrete, mulch, topsoil, fencing, pavers, and retaining walls."
+  description: "Free calculators for gravel, driveway gravel, deck materials, concrete, mulch, topsoil, fencing, pavers, and retaining walls.",
+  alternates: {
+    canonical: "/calculators"
+  },
+  openGraph: {
+    title: "Free Property & Material Calculators | Found & Forged",
+    description: "Free calculators for gravel, driveway gravel, deck materials, concrete, mulch, topsoil, fencing, pavers, and retaining walls.",
+    url: "/calculators",
+    type: "website"
+  }
 };
 
 export default function CalculatorsPage() {
