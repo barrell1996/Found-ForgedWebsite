@@ -6,7 +6,8 @@ const work = ["Box blade grading", "Driveway touch-ups", "Gravel movement", "Sma
 export const metadata: Metadata = {
   title: "Light Tractor Services & Box Blade Work in Western Ohio",
   description: "Light tractor services, box blade work, gravel driveway touch-ups, grading, gravel movement, and small-property improvements in western Ohio.",
-  openGraph: { title: "Light Tractor Services in Western Ohio | Found & Forged", description: "Practical light tractor work for gravel drives, lanes, pads, box blade grading, and small property projects." }
+  alternates: { canonical: "/light-tractor-services" },
+  openGraph: { title: "Light Tractor Services in Western Ohio | Found & Forged", description: "Practical light tractor work for gravel drives, lanes, pads, box blade grading, and small property projects.", url: "/light-tractor-services", type: "website" }
 };
 
 export default function LightTractorServicesPage() {
