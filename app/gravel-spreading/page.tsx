@@ -6,7 +6,8 @@ const uses = ["New gravel top-dressing", "Driveway touch-ups", "Gravel redistrib
 export const metadata: Metadata = {
   title: "Gravel Spreading & Redistribution in Western Ohio",
   description: "Gravel spreading and redistribution for driveways, lanes, pads, and small-property access areas in western Ohio.",
-  openGraph: { title: "Gravel Spreading in Western Ohio | Found & Forged", description: "Spread new gravel or redistribute existing stone for cleaner driveways, pads, and property access." }
+  alternates: { canonical: "/gravel-spreading" },
+  openGraph: { title: "Gravel Spreading in Western Ohio | Found & Forged", description: "Spread new gravel or redistribute existing stone for cleaner driveways, pads, and property access.", url: "/gravel-spreading", type: "website" }
 };
 
 export default function GravelSpreadingPage() {
