@@ -5,7 +5,16 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
   title: "Learning Center",
-  description: "Found & Forged learning hubs for gravel driveways, DIY property projects, equipment, and digital plans."
+  description: "Found & Forged learning hubs for gravel driveways, DIY property projects, equipment, and digital plans.",
+  alternates: {
+    canonical: "/learning"
+  },
+  openGraph: {
+    title: "Learning Center | Found & Forged",
+    description: "Found & Forged learning hubs for gravel driveways, DIY property projects, equipment, and digital plans.",
+    url: "/learning",
+    type: "website"
+  }
 };
 
 export default function LearningPage() {
