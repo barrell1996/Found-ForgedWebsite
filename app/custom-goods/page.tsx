@@ -4,7 +4,16 @@ import { customGoods } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Custom Goods",
-  description: "Leather patch hats, apparel, laser-made goods, and custom branded products from Found & Forged."
+  description: "Leather patch hats, apparel, laser-made goods, and custom branded products from Found & Forged.",
+  alternates: {
+    canonical: "/custom-goods"
+  },
+  openGraph: {
+    title: "Custom Goods | Found & Forged",
+    description: "Leather patch hats, apparel, laser-made goods, and custom branded products from Found & Forged.",
+    url: "/custom-goods",
+    type: "website"
+  }
 };
 
 export default function CustomGoodsPage() {
