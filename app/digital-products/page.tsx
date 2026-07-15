@@ -5,7 +5,16 @@ import { digitalProducts } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Digital Products",
-  description: "Downloadable DIY plans, deck plans, patio plans, driveway guides, property maintenance templates, calculators, and planning tools from Found & Forged."
+  description: "Downloadable DIY plans, deck plans, patio plans, driveway guides, property maintenance templates, calculators, and planning tools from Found & Forged.",
+  alternates: {
+    canonical: "/digital-products"
+  },
+  openGraph: {
+    title: "Digital Products | Found & Forged",
+    description: "Downloadable DIY plans, driveway guides, property maintenance templates, calculators, and planning tools from Found & Forged.",
+    url: "/digital-products",
+    type: "website"
+  }
 };
 
 export default function DigitalProductsPage() {
