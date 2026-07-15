@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/custom-goods",
     "/gravel-driveway-rehabilitation",
     "/gravel-driveway-repair",
-    "/driveway-grading",
     "/gravel-driveway-grading",
     "/gravel-spreading",
     "/gravel-redistribution",
