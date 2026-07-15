@@ -6,7 +6,8 @@ const causes = ["Standing water", "No crown", "Loose gravel displacement", "Soft
 export const metadata: Metadata = {
   title: "Gravel Driveway Pothole Repair in Western Ohio",
   description: "Pothole repair for gravel driveways in western Ohio. Fix ruts, low spots, washouts, soft areas, and recurring driveway potholes.",
-  openGraph: { title: "Gravel Driveway Pothole Repair | Found & Forged", description: "Repair recurring gravel driveway potholes by addressing drainage, shape, gravel movement, and rough travel lanes." }
+  alternates: { canonical: "/pothole-repair" },
+  openGraph: { title: "Gravel Driveway Pothole Repair | Found & Forged", description: "Repair recurring gravel driveway potholes by addressing drainage, shape, gravel movement, and rough travel lanes.", url: "/pothole-repair", type: "website" }
 };
 
 export default function PotholeRepairPage() {
