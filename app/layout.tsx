@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { JsonLd, canonicalUrl } from "@/components/JsonLd";
 
@@ -105,6 +106,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics />
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <Header />
         <main>{children}</main>
