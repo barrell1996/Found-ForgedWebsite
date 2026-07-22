@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Found & Forged" }],
   creator: "Found & Forged",
   publisher: "Found & Forged",
+  verification: {
+    google: "Aqo_8PfMdwMnPtGsgbitOaUzpyKepVZFcwbeM3K28fM"
+  },
   robots: {
     index: true,
     follow: true,
