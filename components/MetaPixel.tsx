@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Script from "next/script";
 
 const pixelId = "1019401011006212";
@@ -21,12 +20,12 @@ export function MetaPixel() {
         `}
       </Script>
       <noscript>
-        <Image
+        <img
           alt=""
-          height={1}
+          height="1"
           src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}
           style={{ display: "none" }}
-          width={1}
+          width="1"
         />
       </noscript>
     </>
