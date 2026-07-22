@@ -26,7 +26,7 @@ export default function GravelDrivewayGradingPage() {
         { question: "Can grading fix potholes?", answer: "Grading can help potholes when they are caused by surface shape, water, and loose gravel movement. Severe base failure may need more material or additional repair." },
         { question: "How often should a gravel driveway be graded?", answer: "It depends on traffic, slope, drainage, and gravel depth. Many rural drives benefit from grading when ruts, washboards, or recurring potholes start to return." }
       ]}
-      related={[{ label: "Driveway Grading", href: "/driveway-grading" }, { label: "Gravel Driveway Repair", href: "/gravel-driveway-repair" }, { label: "Pothole Repair", href: "/pothole-repair" }, { label: "Gravel Redistribution", href: "/gravel-redistribution" }]}
+      related={[{ label: "Gravel Driveway Repair", href: "/gravel-driveway-repair" }, { label: "Pothole Repair", href: "/pothole-repair" }, { label: "Gravel Redistribution", href: "/gravel-redistribution" }]}
       ctaLabel="Request Driveway Grading"
     />
   );
