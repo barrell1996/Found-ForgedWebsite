@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { JsonLd, canonicalUrl } from "@/components/JsonLd";
+import { MetaPixel } from "@/components/MetaPixel";
 
 const siteName = "Found & Forged";
 const siteDescription =
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <GoogleAnalytics />
+        <MetaPixel />
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <Header />
         <main>{children}</main>
