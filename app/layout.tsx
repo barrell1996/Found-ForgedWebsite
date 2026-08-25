@@ -108,7 +108,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       "Culvert and drainage repair",
       "Light tractor services"
     ],
-    email: "hello@foundforgedco.com"
+    email: "hello@foundforgedco.com",
+    telephone: "+1-937-572-8109",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-937-572-8109",
+      contactType: "customer service",
+      areaServed: "US-OH",
+      availableLanguage: "English"
+    }
   };
 
   const websiteSchema = {

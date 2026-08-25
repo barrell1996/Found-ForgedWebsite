@@ -21,6 +21,7 @@ export function Footer() {
           <a href={`mailto:${contactEmail}`} className="mt-5 inline-block text-sm font-black text-white underline decoration-forged-rust underline-offset-4 hover:text-forged-rust">
             {contactEmail}
           </a>
+          <a href="tel:+19375728109" className="mt-3 block text-lg font-black text-white hover:text-forged-rust">(937) 572-8109</a>
         </div>
         <div className="grid gap-8 sm:grid-cols-3">
           <FooterGroup title="Property Services" links={[["Driveway Repair", "/gravel-driveway-repair"], ["Driveway Grading", "/gravel-driveway-grading"], ["Free Estimate", "/contact"]]} />
@@ -29,7 +30,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-forged-silver">
-        Locally owned in Miami County, Ohio · <a href={`mailto:${contactEmail}`} className="hover:text-white">{contactEmail}</a>
+        Locally owned in Miami County, Ohio · <a href="tel:+19375728109" className="hover:text-white">(937) 572-8109</a> · <a href={`mailto:${contactEmail}`} className="hover:text-white">{contactEmail}</a>
       </div>
     </footer>
   );

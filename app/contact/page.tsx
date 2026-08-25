@@ -4,6 +4,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const contactEmail = "hello@foundforgedco.com";
+const phoneDisplay = "(937) 572-8109";
 
 export const metadata: Metadata = {
   title: "Request a Free Gravel Driveway Estimate | Found & Forged",
@@ -49,6 +50,11 @@ export default function ContactPage() {
                 . We normally respond within one business day.
               </p>
             </SectionHeader>
+            <div className="panel p-5 sm:p-6">
+              <p className="eyebrow">Call or text</p>
+              <a href="tel:+19375728109" className="mt-3 block text-2xl font-black text-forged-black hover:text-forged-rust">{phoneDisplay}</a>
+              <p className="mt-3 text-sm leading-7 text-forged-charcoal">For the fastest start, text your name, service location, a short description, and a few photos of the driveway or work area.</p>
+            </div>
             <div className="panel p-5 sm:p-6">
               <p className="eyebrow">Email directly</p>
               <a href={`mailto:${contactEmail}`} className="mt-3 block text-xl font-black text-forged-black hover:text-forged-rust">

@@ -80,6 +80,7 @@ export function PropertyServicePage({
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-200">{intro}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/contact" className="button-secondary border-white bg-white text-[#15120f] hover:bg-transparent hover:text-white">{ctaLabel}</Link>
+            <a href="tel:+19375728109" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">Call / Text (937) 572-8109</a>
             <Link href="/services" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">View All Property Services</Link>
           </div>
         </div>

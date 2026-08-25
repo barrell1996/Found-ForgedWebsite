@@ -30,9 +30,10 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link href="/contact" className="button-primary hidden sm:inline-flex">
-          Free Estimate
-        </Link>
+        <div className="hidden items-center gap-4 sm:flex">
+          <a href="tel:+19375728109" className="text-xs font-black text-[#15120f] hover:text-[#9a7146]">(937) 572-8109</a>
+          <Link href="/contact" className="button-primary">Free Estimate</Link>
+        </div>
       </div>
       <nav className="flex gap-1 overflow-x-auto border-t border-[#e8dece] px-4 py-2 lg:hidden">
         {[...navItems, ["Free Estimate", "/contact"]].map(([label, href]) => (
@@ -41,9 +42,10 @@ export function Header() {
           </Link>
         ))}
       </nav>
-      <Link href="/contact" className="fixed bottom-4 right-4 z-50 inline-flex min-h-12 items-center justify-center bg-[#15120f] px-5 text-xs font-black uppercase tracking-[.14em] text-white shadow-xl sm:hidden">
-        Free Estimate
-      </Link>
+      <div className="fixed bottom-4 left-4 right-4 z-50 grid grid-cols-2 gap-2 sm:hidden">
+        <a href="tel:+19375728109" className="inline-flex min-h-12 items-center justify-center border border-[#15120f] bg-white px-4 text-xs font-black uppercase tracking-[.14em] text-[#15120f] shadow-xl">Call / Text</a>
+        <Link href="/contact" className="inline-flex min-h-12 items-center justify-center bg-[#15120f] px-4 text-xs font-black uppercase tracking-[.14em] text-white shadow-xl">Free Estimate</Link>
+      </div>
     </header>
   );
 }

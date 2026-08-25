@@ -36,6 +36,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-100">Practical repair for potholes, washboards, poor crown, drainage problems, and displaced gravel in Troy, Piqua, Tipp City, and nearby communities.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="button-primary bg-[#d4b07b] text-[#15120f] hover:bg-white">Request a Free Estimate</Link>
+              <a href="tel:+19375728109" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">Call / Text (937) 572-8109</a>
               <Link href="/gravel-driveway-repair" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">See How We Repair Drives</Link>
             </div>
             <p className="mt-6 text-sm font-bold text-stone-200">Send a few photos and your service location to get started.</p>
@@ -101,7 +102,7 @@ export default function Home() {
       </section>
 
       <section className="section-pad border-t border-stone-200 bg-[#eee4d5]">
-        <div className="container-tight flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center"><div><p className="eyebrow">Ready to start?</p><h2 className="display-serif mt-2 text-4xl font-black">Request a free property-service estimate.</h2></div><Link href="/contact" className="button-primary">Send Project Details &amp; Photos</Link></div>
+        <div className="container-tight flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center"><div><p className="eyebrow">Ready to start?</p><h2 className="display-serif mt-2 text-4xl font-black">Request a free property-service estimate.</h2></div><div className="flex flex-wrap gap-3"><a href="tel:+19375728109" className="button-secondary">Call / Text (937) 572-8109</a><Link href="/contact" className="button-primary">Send Project Details &amp; Photos</Link></div></div>
       </section>
 
       <section className="border-t border-stone-200 bg-[#fbf7ef] px-5 py-8 sm:px-8 lg:px-12">
