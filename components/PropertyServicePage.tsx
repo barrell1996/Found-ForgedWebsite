@@ -55,7 +55,7 @@ export function PropertyServicePage({
       "@type": "Service",
       name: serviceName,
       provider: { "@type": "LocalBusiness", name: "Found & Forged Property Services" },
-      areaServed: "Western Ohio",
+      areaServed: ["Miami County, Ohio", "Troy, Ohio", "Piqua, Ohio", "Tipp City, Ohio", "Western Ohio"],
       serviceType: serviceName,
       url
     },

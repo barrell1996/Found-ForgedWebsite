@@ -16,20 +16,20 @@ export function Footer() {
             className="mb-5 h-20 w-20 rounded-full border border-forged-steel object-cover"
           />
           <p className="max-w-sm text-sm leading-7 text-forged-concrete">
-            Premium practical-property services, guides, calculators, and durable ideas for the work around home.
+            Gravel driveway repair, grading, gravel spreading, and light tractor services for Miami County and nearby western Ohio properties.
           </p>
           <a href={`mailto:${contactEmail}`} className="mt-5 inline-block text-sm font-black text-white underline decoration-forged-rust underline-offset-4 hover:text-forged-rust">
             {contactEmail}
           </a>
         </div>
         <div className="grid gap-8 sm:grid-cols-3">
-          <FooterGroup title="Headquarters" links={[["Services", "/services"], ["Digital Products", "/digital-products"], ["Quote Request", "/contact"]]} />
-          <FooterGroup title="Brand Lanes" links={[["Curated Goods", "/curated-goods"], ["Custom Goods", "/custom-goods"], ["Gravel Rehab", "/gravel-driveway-rehabilitation"]]} />
-          <FooterGroup title="Resources" links={[["Knowledge Center", "/blog"], ["Learning Center", "/learning"], ["Calculators", "/calculators"]]} />
+          <FooterGroup title="Property Services" links={[["Driveway Repair", "/gravel-driveway-repair"], ["Driveway Grading", "/gravel-driveway-grading"], ["Free Estimate", "/contact"]]} />
+          <FooterGroup title="Service Area" links={[["Miami County", "/gravel-driveway-repair-miami-county-ohio"], ["Troy", "/gravel-driveway-repair-troy-ohio"], ["Piqua", "/gravel-driveway-repair-piqua-ohio"], ["Tipp City", "/gravel-driveway-repair-tipp-city-ohio"]]} />
+          <FooterGroup title="More From Found & Forged" links={[["Knowledge Center", "/blog"], ["Calculators", "/calculators"], ["Vintage & Custom Goods", "/curated-goods"]]} />
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-forged-silver">
-        Built for Home. Property. Life. · <a href={`mailto:${contactEmail}`} className="hover:text-white">{contactEmail}</a>
+        Locally owned in Miami County, Ohio · <a href={`mailto:${contactEmail}`} className="hover:text-white">{contactEmail}</a>
       </div>
     </footer>
   );

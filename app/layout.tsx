@@ -9,19 +9,20 @@ import { MetaPixel } from "@/components/MetaPixel";
 
 const siteName = "Found & Forged";
 const siteDescription =
-  "Found & Forged provides gravel driveway repair, grading, gravel spreading, light tractor work, custom goods, curated goods, digital plans, and practical property resources in western Ohio.";
+  "Found & Forged provides gravel driveway repair, grading, gravel spreading, and light tractor work in Troy, Piqua, Tipp City, Miami County, and nearby western Ohio communities.";
 const logoPath = "/brand/found-forged-logo.jpeg";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://foundforgedco.com"),
   applicationName: siteName,
   title: {
-    default: "Found & Forged | Gravel Driveway Repair & Property Services in Western Ohio",
+    default: "Found & Forged | Gravel Driveway Repair in Miami County, Ohio",
     template: "%s | Found & Forged"
   },
   description: siteDescription,
   keywords: [
-    "gravel driveway repair western Ohio",
+    "gravel driveway repair Miami County Ohio",
+    "gravel driveway repair Troy Ohio",
     "gravel driveway grading",
     "driveway pothole repair",
     "gravel spreading",
@@ -91,8 +92,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     logo: canonicalUrl(logoPath),
     description: siteDescription,
     areaServed: [
-      { "@type": "AdministrativeArea", name: "Western Ohio" },
-      { "@type": "AdministrativeArea", name: "Miami County, Ohio" }
+      { "@type": "AdministrativeArea", name: "Miami County, Ohio" },
+      { "@type": "City", name: "Troy, Ohio" },
+      { "@type": "City", name: "Piqua, Ohio" },
+      { "@type": "City", name: "Tipp City, Ohio" },
+      { "@type": "AdministrativeArea", name: "Shelby County, Ohio" },
+      { "@type": "AdministrativeArea", name: "Champaign County, Ohio" },
+      { "@type": "AdministrativeArea", name: "Montgomery County, Ohio" }
     ],
     makesOffer: [
       "Gravel driveway repair",
@@ -100,11 +106,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       "Pothole repair",
       "Gravel spreading",
       "Culvert and drainage repair",
-      "Light tractor services",
-      "Custom goods",
-      "Curated vintage goods",
-      "Digital plans and guides"
-    ]
+      "Light tractor services"
+    ],
+    email: "hello@foundforgedco.com"
   };
 
   const websiteSchema = {

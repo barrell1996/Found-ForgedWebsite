@@ -9,6 +9,11 @@ const nextConfig = {
         source: "/driveway-grading",
         destination: "/gravel-driveway-grading",
         permanent: true
+      },
+      {
+        source: "/gravel-driveway-rehabilitation",
+        destination: "/gravel-driveway-repair",
+        permanent: true
       }
     ];
   }

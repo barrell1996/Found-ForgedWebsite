@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, slugify } from "@/lib/blog";
 import { categories } from "@/lib/site-data";
+import { locationPages } from "@/lib/location-pages";
 
 const base = "https://foundforgedco.com";
 
@@ -11,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/digital-products",
     "/curated-goods",
     "/custom-goods",
-    "/gravel-driveway-rehabilitation",
     "/gravel-driveway-repair",
     "/gravel-driveway-grading",
     "/gravel-spreading",
@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages.map((page) => ({ url: `${base}${page}`, lastModified: new Date() })),
+    ...locationPages.map((page) => ({ url: `${base}/${page.slug}`, lastModified: new Date() })),
     ...posts.map((post) => ({ url: `${base}/blog/${post.slug}`, lastModified: new Date(post.date) })),
     ...categories.map((category) => ({ url: `${base}/blog/category/${slugify(category)}`, lastModified: new Date() })),
     ...tagUrls.map((url) => ({ url, lastModified: new Date() }))

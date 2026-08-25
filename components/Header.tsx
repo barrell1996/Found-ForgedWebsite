@@ -2,13 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
-  ["Services", "/services"],
-  ["Digital Plans", "/digital-products"],
-  ["Shop", "/custom-goods"],
-  ["Vintage Finds", "/curated-goods"],
+  ["Driveway Services", "/services"],
+  ["Service Area", "/gravel-driveway-repair-miami-county-ohio"],
   ["About", "/about"],
-  ["Blog", "/blog"],
-  ["Contact", "/contact"]
+  ["Resources", "/blog"],
+  ["More", "/curated-goods"]
 ];
 
 export function Header() {
@@ -33,16 +31,19 @@ export function Header() {
           ))}
         </nav>
         <Link href="/contact" className="button-primary hidden sm:inline-flex">
-          Get a Quote
+          Free Estimate
         </Link>
       </div>
       <nav className="flex gap-1 overflow-x-auto border-t border-[#e8dece] px-4 py-2 lg:hidden">
-        {[...navItems, ["Get a Quote", "/contact"]].map(([label, href]) => (
+        {[...navItems, ["Free Estimate", "/contact"]].map(([label, href]) => (
           <Link key={href} href={href} className="shrink-0 px-3 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-[#15120f]">
             {label}
           </Link>
         ))}
       </nav>
+      <Link href="/contact" className="fixed bottom-4 right-4 z-50 inline-flex min-h-12 items-center justify-center bg-[#15120f] px-5 text-xs font-black uppercase tracking-[.14em] text-white shadow-xl sm:hidden">
+        Free Estimate
+      </Link>
     </header>
   );
 }

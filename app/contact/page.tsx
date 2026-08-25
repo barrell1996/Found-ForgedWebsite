@@ -6,13 +6,13 @@ import { SectionHeader } from "@/components/SectionHeader";
 const contactEmail = "hello@foundforgedco.com";
 
 export const metadata: Metadata = {
-  title: "Contact Found & Forged | Request a Gravel Driveway or Property Services Quote",
-  description: "Request a quote from Found & Forged for gravel driveway rehabilitation, grading, gravel spreading, box blade work, light tractor services, and property projects in western Ohio.",
+  title: "Request a Free Gravel Driveway Estimate | Found & Forged",
+  description: "Request a free estimate for gravel driveway repair, grading, gravel spreading, potholes, culverts, and light tractor work in Miami County and nearby western Ohio communities.",
   alternates: {
     canonical: "/contact"
   },
   openGraph: {
-    title: "Contact Found & Forged | Request a Quote",
+    title: "Request a Free Property-Service Estimate | Found & Forged",
     description: "Send photos and project details for gravel driveway repair, grading, gravel spreading, box blade work, and property services.",
     url: "/contact",
     type: "website"
@@ -37,26 +37,30 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={[contactSchema, breadcrumbSchema]} />
-      <section className="section-pad blueprint bg-forged-smoke">
+      <section className="section-pad bg-forged-smoke">
         <div className="container-tight grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="grid gap-6">
-            <SectionHeader eyebrow="Quote request" title="Tell us what needs built, fixed, graded, or planned.">
+            <SectionHeader eyebrow="Free estimate" title="Tell us what is happening on the property.">
               <p>
-                Send project details through the form, or email us directly at{" "}
+                Send your location, a short description, and a few useful photos. You can also email us directly at{" "}
                 <a href={`mailto:${contactEmail}`} className="font-black text-forged-black underline decoration-forged-rust underline-offset-4">
                   {contactEmail}
                 </a>
-                .
+                . We normally respond within one business day.
               </p>
             </SectionHeader>
             <div className="panel p-5 sm:p-6">
-              <p className="eyebrow">Direct Contact</p>
+              <p className="eyebrow">Email directly</p>
               <a href={`mailto:${contactEmail}`} className="mt-3 block text-xl font-black text-forged-black hover:text-forged-rust">
                 {contactEmail}
               </a>
               <p className="mt-3 text-sm leading-7 text-forged-charcoal">
-                Use this address for general questions, quote requests, custom goods, curated finds, and digital product support.
+                Include the service location, approximate driveway size, the problem you are seeing, and photos of the overall area and any potholes, ruts, culverts, or drainage concerns.
               </p>
+            </div>
+            <div className="panel p-5 sm:p-6">
+              <p className="eyebrow">Primary coverage</p>
+              <p className="mt-3 text-sm leading-7 text-forged-charcoal">Troy, Piqua, Tipp City, Covington, Pleasant Hill, West Milton, Casstown, and selected nearby projects in Shelby, Champaign, and northern Montgomery counties.</p>
             </div>
           </div>
           <QuoteForm />

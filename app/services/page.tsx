@@ -13,12 +13,12 @@ const problems = [
   "Uneven pads, lanes, and work areas"
 ];
 
-const serviceAreas = ["western Ohio", "rural homes", "small acreages", "farm lanes", "country driveways", "private gravel roads"];
+const serviceAreas = ["Miami County", "Troy", "Piqua", "Tipp City", "Covington", "Pleasant Hill", "West Milton", "Casstown"];
 
 export const metadata: Metadata = {
-  title: "Gravel Driveway Repair, Grading & Light Tractor Services in Western Ohio",
+  title: "Gravel Driveway Repair & Grading in Miami County, Ohio",
   description:
-    "Found & Forged provides gravel driveway maintenance, repair, grading, pothole repair, gravel spreading, culvert repair, finish grading, and light tractor services in western Ohio.",
+    "Found & Forged provides gravel driveway repair, grading, pothole repair, gravel spreading, culvert repair, and light tractor services in Troy, Piqua, Tipp City, and Miami County.",
   alternates: {
     canonical: "/services"
   },
@@ -69,7 +69,7 @@ export default function ServicesPage() {
       <section className="section-pad bg-[#15120f] text-white">
         <div className="container-tight grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <p className="eyebrow text-[#d4b07b]">Property Services in Western Ohio</p>
+            <p className="eyebrow text-[#d4b07b]">Property Services in Miami County &amp; Western Ohio</p>
             <h1 className="mt-4 max-w-5xl text-4xl font-black uppercase leading-tight sm:text-6xl">
               Gravel Driveway Repair, Grading & Light Tractor Services
             </h1>
@@ -78,9 +78,9 @@ export default function ServicesPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="button-secondary border-white bg-white text-[#15120f] hover:bg-transparent hover:text-white">
-                Request an Estimate
+                Request a Free Estimate
               </Link>
-              <Link href="/gravel-driveway-rehabilitation" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">
+              <Link href="/gravel-driveway-repair" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">
                 Gravel Driveway Repair
               </Link>
             </div>
@@ -132,11 +132,11 @@ export default function ServicesPage() {
         <div className="container-tight grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow">Service Area</p>
-            <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#15120f]">Built for western Ohio properties.</h2>
+            <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#15120f]">Built for Miami County and nearby properties.</h2>
           </div>
           <div>
             <p className="text-base leading-8 text-stone-700">
-              Found & Forged focuses on practical property work for {serviceAreas.join(", ")}. The best projects are close enough for efficient mobilization, clear in scope, and suited for light tractor, grading, box blade, and gravel work.
+              Found & Forged focuses on practical property work in {serviceAreas.join(", ")}, with selected projects in nearby Shelby, Champaign, and northern Montgomery counties. The best projects are close enough for efficient mobilization, clear in scope, and suited for light tractor, grading, box blade, and gravel work.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {serviceAreas.map((area) => <span key={area} className="border border-stone-300 bg-white px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#15120f]">{area}</span>)}
