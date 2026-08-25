@@ -1,5 +1,20 @@
 export const services = [
   {
+    title: "Garden-Bed Cleanup",
+    href: "/garden-bed-cleanup",
+    summary: "Clear weeds, leaves, dead growth, small debris, and tired edges so planting beds look maintained and are ready for mulch."
+  },
+  {
+    title: "Mulching",
+    href: "/mulching",
+    summary: "Prepare garden beds and install an even mulch layer for a cleaner appearance, moisture retention, and easier maintenance."
+  },
+  {
+    title: "Junk Removal",
+    href: "/junk-removal",
+    summary: "Remove unwanted household, garage, yard, and property clutter with clear estimates and responsible disposal."
+  },
+  {
     title: "Gravel Driveway Repair",
     href: "/gravel-driveway-repair",
     summary: "Repair potholes, ruts, washouts, soft spots, rough entrances, loose gravel migration, and worn driveway surfaces across western Ohio."
@@ -56,7 +71,7 @@ export const brandPillars = [
     title: "Property Services",
     href: "/services",
     summary:
-      "Gravel driveway rehabilitation, grading, gravel spreading, box blade work, and small property improvement projects."
+      "Garden-bed cleanup, mulching, junk removal, gravel driveway work, light tractor services, and small property improvement projects."
   },
   {
     title: "Digital Products",

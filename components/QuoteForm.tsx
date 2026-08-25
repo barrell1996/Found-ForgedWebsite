@@ -16,13 +16,13 @@ export function QuoteForm() {
           `Email: ${data.get("email") || "Not provided"}`,
           `City / service location: ${data.get("city")}`,
           `Service needed: ${data.get("service")}`,
-          `Approximate driveway size: ${data.get("size") || "Not provided"}`,
+          `Approximate project size / load: ${data.get("size") || "Not provided"}`,
           `Preferred contact: ${data.get("contactMethod")}`,
           "",
           "Project description:",
           String(data.get("description") || "Not provided"),
           "",
-          "Please attach any driveway, culvert, drainage, or access photos to this email before sending."
+          "Please attach clear photos of the work area, items to remove, access, garden beds, or driveway before sending."
         ].join("\n");
         window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       }}
@@ -44,20 +44,20 @@ export function QuoteForm() {
         <label className="grid gap-2 text-xs font-black uppercase tracking-[0.14em]">
           Service Needed
           <select name="service" className="min-h-12 border border-forged-concrete bg-forged-smoke px-3 text-base font-bold outline-none focus:border-forged-black">
-            <option>Gravel Driveway Repair</option><option>Driveway Grading</option><option>Pothole / Washout Repair</option><option>Gravel Spreading or Redistribution</option><option>Culvert / Drainage Concern</option><option>Light Tractor Work</option><option>Other Property Project</option>
+            <option>Garden-Bed Cleanup</option><option>Mulching</option><option>Junk Removal</option><option>Gravel Driveway Repair</option><option>Driveway Grading</option><option>Pothole / Washout Repair</option><option>Gravel Spreading or Redistribution</option><option>Culvert / Drainage Concern</option><option>Light Tractor Work</option><option>Other Property Project</option>
           </select>
         </label>
-        <Field name="size" label="Approx. Length × Width (optional)" placeholder="Example: 500 ft × 12 ft" />
+        <Field name="size" label="Approx. Size / Load (optional)" placeholder="Bed dimensions, driveway size, or pickup loads" />
       </div>
       <label className="grid gap-2 text-xs font-black uppercase tracking-[0.14em]">
         What is happening?
-        <textarea name="description" required rows={5} placeholder="Describe potholes, ruts, water flow, soft areas, gravel condition, culverts, or other concerns." className="border border-forged-concrete bg-forged-smoke px-3 py-3 text-base font-medium normal-case outline-none focus:border-forged-black" />
+        <textarea name="description" required rows={5} placeholder="Describe what needs cleaned up, mulched, removed, repaired, graded, or improved." className="border border-forged-concrete bg-forged-smoke px-3 py-3 text-base font-medium normal-case outline-none focus:border-forged-black" />
       </label>
       <label className="grid gap-2 text-xs font-black uppercase tracking-[0.14em]">
         Preferred Contact Method
         <select name="contactMethod" className="min-h-12 border border-forged-concrete bg-forged-smoke px-3 text-base font-bold outline-none focus:border-forged-black"><option>Text</option><option>Phone</option><option>Email</option></select>
       </label>
-      <div className="border border-stone-200 bg-white p-4 text-sm leading-6 text-stone-700"><strong>Helpful photos:</strong> the full driveway from the road, close-ups of damaged areas, the entrance or culvert, and water flow after rain. Attach them to the email that opens.</div>
+      <div className="border border-stone-200 bg-white p-4 text-sm leading-6 text-stone-700"><strong>Helpful photos:</strong> the full work area, garden-bed edges, current mulch, every item or pile to remove, access routes, driveway damage, and any areas that need special attention.</div>
       <button type="submit" className="button-primary w-full sm:w-auto">Open Estimate Email</button>
       <p className="text-xs leading-5 text-stone-600">Your information is used only to review and respond to your project request.</p>
     </form>

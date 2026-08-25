@@ -5,27 +5,27 @@ import { JsonLd, breadcrumbJsonLd, canonicalUrl } from "@/components/JsonLd";
 import { services } from "@/lib/site-data";
 
 const problems = [
+  "Overgrown garden beds",
+  "Old mulch and seasonal debris",
+  "Garage and household clutter",
+  "Yard debris and unwanted items",
   "Recurring driveway potholes",
-  "Ruts and washboard sections",
-  "Water running down the drive",
-  "Gravel pushed into the shoulders",
-  "Soft spots near culverts or entrances",
-  "Uneven pads, lanes, and work areas"
+  "Small grading and tractor projects"
 ];
 
 const serviceAreas = ["Miami County", "Troy", "Piqua", "Tipp City", "Covington", "Pleasant Hill", "West Milton", "Casstown"];
 
 export const metadata: Metadata = {
-  title: "Gravel Driveway Repair & Grading in Miami County, Ohio",
+  title: "Property Services in Miami County | Cleanup, Mulch, Junk & Driveways",
   description:
-    "Found & Forged provides gravel driveway repair, grading, pothole repair, gravel spreading, culvert repair, and light tractor services in Troy, Piqua, Tipp City, and Miami County.",
+    "Found & Forged provides garden-bed cleanup, mulching, junk removal, gravel driveway repair, grading, and light tractor services in Troy, Piqua, Tipp City, and Miami County.",
   alternates: {
     canonical: "/services"
   },
   openGraph: {
-    title: "Western Ohio Gravel Driveway Repair & Property Services | Found & Forged",
+    title: "Miami County Property Services | Found & Forged",
     description:
-      "Request an estimate for gravel driveway repair, grading, pothole repair, gravel redistribution, culvert repair, finish grading, and light tractor services.",
+      "Request an estimate for garden-bed cleanup, mulching, junk removal, gravel driveway work, grading, and light tractor services.",
     url: "/services",
     type: "website"
   }
@@ -36,13 +36,13 @@ export default function ServicesPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${canonicalUrl("/services")}#service`,
-    name: "Gravel Driveway Repair, Grading and Light Tractor Services",
+    name: "Property Cleanup, Mulching, Junk Removal, Driveway and Tractor Services",
     url: canonicalUrl("/services"),
     image: canonicalUrl("/brand/service-gravel.jpg"),
     areaServed: "Western Ohio",
     provider: { "@id": `${canonicalUrl()}#business` },
     description:
-      "Gravel driveway maintenance, gravel driveway repair, driveway grading, pothole repair, gravel spreading, culvert repair, finish grading, and light tractor services.",
+      "Garden-bed cleanup, mulching, junk removal, gravel driveway repair, grading, gravel spreading, and light tractor services.",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Found & Forged Property Services",
@@ -69,19 +69,19 @@ export default function ServicesPage() {
       <section className="section-pad bg-[#15120f] text-white">
         <div className="container-tight grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <p className="eyebrow text-[#d4b07b]">Property Services in Miami County &amp; Western Ohio</p>
+            <p className="eyebrow text-[#d4b07b]">Local Property Services · Miami County &amp; Western Ohio</p>
             <h1 className="mt-4 max-w-5xl text-4xl font-black uppercase leading-tight sm:text-6xl">
-              Gravel Driveway Repair, Grading & Light Tractor Services
+              Cleanup, Mulching, Junk Removal, Driveways &amp; Property Work
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-200">
-              Found & Forged helps homeowners and property owners repair, maintain, and improve gravel driveways, lanes, culverts, pads, and small-property surfaces with practical grading and tractor work.
+              Found & Forged helps homeowners clean up garden beds, refresh mulch, remove unwanted items, repair gravel driveways, and complete practical right-sized work around the property.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="button-secondary border-white bg-white text-[#15120f] hover:bg-transparent hover:text-white">
                 Request a Free Estimate
               </Link>
-              <Link href="/gravel-driveway-repair" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">
-                Gravel Driveway Repair
+              <Link href="/garden-bed-cleanup" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">
+                Garden-Bed Cleanup
               </Link>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function ServicesPage() {
               What we fix, shape, spread, and maintain.
             </h2>
             <p className="mt-4 text-base leading-8 text-stone-700">
-              Each service page is built around a real property problem: potholes, rutting, drainage, gravel loss, culvert washouts, rough travel lanes, and small grading needs.
+              Each service page is built around a real property need: seasonal cleanup, overgrown beds, fresh mulch, unwanted items, rough driveways, drainage concerns, and small grading projects.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -115,9 +115,9 @@ export default function ServicesPage() {
         <div className="container-tight grid gap-8 lg:grid-cols-2">
           <div>
             <p className="eyebrow">Common Problems</p>
-            <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#15120f]">Driveway problems usually start with water and shape.</h2>
+            <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#15120f]">Practical help for the work that keeps getting pushed back.</h2>
             <p className="mt-5 leading-8 text-stone-700">
-              Most gravel driveway failures come from the same pattern: water sits where it should shed, traffic pounds the weak spot, and loose aggregate migrates out of the travel lane. The right repair starts with reshaping the surface, not just dumping more stone on top.
+              Cleanup, hauling, mulch installation, and driveway work all start with a clear scope. Photos help identify labor, access, material quantities, disposal needs, equipment fit, and the most efficient way to complete the project.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

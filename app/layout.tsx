@@ -9,20 +9,23 @@ import { MetaPixel } from "@/components/MetaPixel";
 
 const siteName = "Found & Forged";
 const siteDescription =
-  "Found & Forged provides gravel driveway repair, grading, gravel spreading, and light tractor work in Troy, Piqua, Tipp City, Miami County, and nearby western Ohio communities.";
+  "Found & Forged provides garden-bed cleanup, mulching, junk removal, gravel driveway work, grading, and light tractor services in Troy, Piqua, Tipp City, Miami County, and nearby western Ohio communities.";
 const logoPath = "/brand/found-forged-logo.jpeg";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://foundforgedco.com"),
   applicationName: siteName,
   title: {
-    default: "Found & Forged | Gravel Driveway Repair in Miami County, Ohio",
+    default: "Found & Forged | Local Property Services in Miami County, Ohio",
     template: "%s | Found & Forged"
   },
   description: siteDescription,
   keywords: [
     "gravel driveway repair Miami County Ohio",
     "gravel driveway repair Troy Ohio",
+    "garden bed cleanup Troy Ohio",
+    "mulching Miami County Ohio",
+    "junk removal Troy Ohio",
     "gravel driveway grading",
     "driveway pothole repair",
     "gravel spreading",
@@ -101,6 +104,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       { "@type": "AdministrativeArea", name: "Montgomery County, Ohio" }
     ],
     makesOffer: [
+      "Garden-bed cleanup",
+      "Mulching",
+      "Junk removal",
       "Gravel driveway repair",
       "Gravel driveway grading",
       "Pothole repair",

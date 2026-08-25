@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
-  ["Driveway Services", "/services"],
-  ["Service Area", "/gravel-driveway-repair-miami-county-ohio"],
+  ["Property Services", "/services"],
+  ["Cleanup & Mulch", "/garden-bed-cleanup"],
+  ["Junk Removal", "/junk-removal"],
+  ["Driveways", "/gravel-driveway-repair"],
   ["About", "/about"],
   ["Resources", "/blog"],
   ["More", "/curated-goods"]

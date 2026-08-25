@@ -3,41 +3,42 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Gravel Driveway Repair & Grading in Miami County, Ohio",
-  description: "Gravel driveway repair, grading, pothole repair, gravel spreading, and light tractor work in Troy, Piqua, Tipp City, and surrounding Miami County communities.",
+  title: "Property Services in Miami County | Cleanup, Mulch, Junk & Driveways",
+  description: "Garden-bed cleanup, mulching, junk removal, gravel driveway repair, grading, and light tractor work in Troy, Piqua, Tipp City, and surrounding Miami County communities.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Gravel Driveway Repair in Miami County | Found & Forged",
-    description: "Practical driveway repair, grading, drainage improvement, and gravel spreading for western Ohio properties.",
+    title: "Local Property Services in Miami County | Found & Forged",
+    description: "Garden-bed cleanup, mulching, junk removal, driveway repair, grading, and practical property work in western Ohio.",
     url: "/",
-    images: [{ url: "/brand/service-gravel.jpg", width: 1536, height: 1024, alt: "Tractor grading a gravel driveway" }]
+    images: [{ url: "/brand/service-cleanup.jpg", width: 1536, height: 1024, alt: "Property cleanup equipment" }]
   }
 };
 
 const services = [
-  { title: "Driveway Repair", href: "/gravel-driveway-repair", image: "/brand/service-gravel.jpg", copy: "Address potholes, ruts, washboards, soft spots, and washed-out edges by fixing the surface shape—not simply covering the problem." },
-  { title: "Driveway Grading", href: "/gravel-driveway-grading", image: "/brand/service-grading.jpg", copy: "Restore crown, improve water shedding, smooth rough travel lanes, and prepare an existing drive for fresh stone when needed." },
-  { title: "Gravel & Tractor Work", href: "/light-tractor-services", image: "/brand/service-cleanup.jpg", copy: "Spread or redistribute gravel and complete practical light-tractor work for lanes, pads, entrances, and small property projects." }
+  { number: "01", title: "Garden-Bed Cleanup", href: "/garden-bed-cleanup", copy: "Clear weeds, leaves, dead growth, small debris, and tired bed edges so planting areas look maintained and are ready for mulch." },
+  { number: "02", title: "Mulching", href: "/mulching", copy: "Prepare beds and install an even mulch layer for a cleaner appearance, better moisture retention, and easier ongoing maintenance." },
+  { number: "03", title: "Junk Removal", href: "/junk-removal", copy: "Remove unwanted household, garage, yard, and property clutter with straightforward estimates and responsible disposal." },
+  { number: "04", title: "Driveway & Tractor Work", href: "/gravel-driveway-repair", copy: "Repair and grade gravel drives, spread material, improve surface drainage, and handle right-sized tractor projects." }
 ];
 
-const problems = ["Potholes that return after rain", "Ruts and washboard sections", "Water running down the driveway", "Gravel pushed into the shoulders", "Rough or washed-out entrances", "Pads and lanes that do not drain"];
+const problems = ["Overgrown or neglected garden beds", "Old mulch and weeds", "Seasonal property cleanup", "Garage or household clutter", "Yard debris and unwanted items", "Rough gravel drives and small grading needs"];
 const areas = ["Troy", "Piqua", "Tipp City", "Covington", "Pleasant Hill", "West Milton", "Casstown", "Vandalia", "Sidney"];
 
 export default function Home() {
   return (
     <>
       <section className="relative min-h-[660px] overflow-hidden border-b border-stone-200 bg-[#15120f]">
-        <Image src="/brand/service-gravel.jpg" alt="Tractor grading a gravel driveway in a rural setting" fill className="object-cover object-center" priority fetchPriority="high" sizes="100vw" />
+        <Image src="/brand/service-cleanup.jpg" alt="Equipment supporting property cleanup work" fill className="object-cover object-center" priority fetchPriority="high" sizes="100vw" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,7,6,.96)_0%,rgba(8,7,6,.82)_46%,rgba(8,7,6,.28)_82%)]" />
         <div className="relative container-tight flex min-h-[660px] items-center px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-3xl text-white">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#d4b07b]">Miami County · Western Ohio</p>
-            <h1 className="display-serif mt-5 text-5xl font-black leading-[.98] sm:text-6xl lg:text-7xl">Gravel Driveway Repair &amp; Grading</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-100">Practical repair for potholes, washboards, poor crown, drainage problems, and displaced gravel in Troy, Piqua, Tipp City, and nearby communities.</p>
+            <h1 className="display-serif mt-5 text-5xl font-black leading-[.98] sm:text-6xl lg:text-7xl">Local Property Services That Get the Work Done</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-100">Garden-bed cleanup, mulching, junk removal, gravel driveway work, and practical small-property projects in Troy, Piqua, Tipp City, and nearby communities.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="button-primary bg-[#d4b07b] text-[#15120f] hover:bg-white">Request a Free Estimate</Link>
               <a href="tel:+19375728109" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">Call / Text (937) 572-8109</a>
-              <Link href="/gravel-driveway-repair" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">See How We Repair Drives</Link>
+              <Link href="/services" className="button-secondary border-white text-white hover:bg-white hover:text-[#15120f]">Explore All Services</Link>
             </div>
             <p className="mt-6 text-sm font-bold text-stone-200">Send a few photos and your service location to get started.</p>
           </div>
@@ -46,7 +47,7 @@ export default function Home() {
 
       <section className="border-b border-stone-200 bg-[#eee4d5] px-5 py-5 sm:px-8 lg:px-12">
         <div className="container-tight flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center text-xs font-black uppercase tracking-[0.15em] text-[#3b3027]">
-          <span>Locally owned</span><span aria-hidden="true">•</span><span>Free estimates</span><span aria-hidden="true">•</span><span>Clear, practical scopes</span><span aria-hidden="true">•</span><span>Right-sized tractor work</span>
+          <span>Locally owned</span><span aria-hidden="true">•</span><span>Free estimates</span><span aria-hidden="true">•</span><span>Property cleanup</span><span aria-hidden="true">•</span><span>Responsible removal</span>
         </div>
       </section>
 
@@ -54,14 +55,13 @@ export default function Home() {
         <div className="container-tight">
           <div className="max-w-3xl">
             <p className="eyebrow">Property services</p>
-            <h2 className="display-serif mt-3 text-4xl font-black leading-tight sm:text-5xl">Fix the cause before buying another load of gravel.</h2>
-            <p className="mt-5 text-base leading-8 text-stone-700">The best repair starts by looking at crown, drainage, gravel movement, traffic wear, and base conditions. We recommend the work that fits the actual driveway problem.</p>
+            <h2 className="display-serif mt-3 text-4xl font-black leading-tight sm:text-5xl">One local contact for the work piling up around your property.</h2>
+            <p className="mt-5 text-base leading-8 text-stone-700">From restoring overgrown beds to hauling away unwanted items or reshaping a rough driveway, we build each estimate around the actual scope and the result you need.</p>
           </div>
-          <div className="mt-9 grid gap-5 lg:grid-cols-3">
+          <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <article key={service.title} className="overflow-hidden border border-stone-200 bg-white shadow-sm">
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#211913]"><Image src={service.image} alt="" fill className="object-cover" sizes="(min-width: 1024px) 33vw, 100vw" /></div>
-                <div className="p-6"><h3 className="text-xl font-black uppercase tracking-[0.04em]">{service.title}</h3><p className="mt-3 leading-7 text-stone-700">{service.copy}</p><Link href={service.href} className="mt-5 inline-flex text-xs font-black uppercase tracking-[0.16em] text-[#7b5a38]">Explore service →</Link></div>
+              <article key={service.title} className="border border-stone-200 bg-white p-6 shadow-sm">
+                <p className="text-sm font-black text-[#9a7146]">{service.number}</p><h3 className="mt-8 text-xl font-black uppercase tracking-[0.04em]">{service.title}</h3><p className="mt-3 leading-7 text-stone-700">{service.copy}</p><Link href={service.href} className="mt-5 inline-flex text-xs font-black uppercase tracking-[0.16em] text-[#7b5a38]">Explore service →</Link>
               </article>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className="section-pad border-y border-stone-200 bg-white">
         <div className="container-tight grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
-          <div><p className="eyebrow">Common problems</p><h2 className="display-serif mt-3 text-4xl font-black leading-tight">When the driveway stops working for you.</h2><p className="mt-5 leading-8 text-stone-700">Recurring damage usually points to water, shape, traffic, or a weak area beneath the surface. Photos after rain are especially helpful.</p></div>
+          <div><p className="eyebrow">Common projects</p><h2 className="display-serif mt-3 text-4xl font-black leading-tight">When the property needs attention and the list keeps growing.</h2><p className="mt-5 leading-8 text-stone-700">Send photos of the work area, unwanted material, access, and the finished result you have in mind. Clear photos help us quote efficiently.</p></div>
           <div className="grid gap-3 sm:grid-cols-2">{problems.map((problem) => <div key={problem} className="border border-stone-200 bg-[#fbf7ef] p-5 text-sm font-black uppercase tracking-[.07em]">{problem}</div>)}</div>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="container-tight grid gap-10 lg:grid-cols-2">
           <div><p className="eyebrow">A straightforward estimate process</p><h2 className="display-serif mt-3 text-4xl font-black leading-tight">Start with the property, not a sales pitch.</h2></div>
           <div className="grid gap-5">
-            {[["01", "Send the basics", "Share your city, approximate driveway size, a short description, and clear photos of the overall drive and problem areas."], ["02", "Identify the likely cause", "We review crown, drainage, ruts, gravel depth, culverts, access, and whether the job fits light tractor equipment."], ["03", "Agree on the work", "You receive a clear scope for grading, repair, redistribution, spreading, or the next practical step."]].map(([number, title, copy]) => (
+            {[["01", "Send the basics", "Share your city, a short description, approximate dimensions or load size, and clear photos of the work area."], ["02", "Define the scope", "We review access, labor, material, disposal needs, equipment fit, and what should remain or be removed."], ["03", "Agree on the work", "You receive a clear scope for cleanup, mulch installation, junk removal, driveway work, or another practical property service."]].map(([number, title, copy]) => (
               <div key={number} className="grid grid-cols-[48px_1fr] gap-4 border-t border-stone-300 pt-5"><span className="text-lg font-black text-[#9a7146]">{number}</span><div><h3 className="text-lg font-black uppercase">{title}</h3><p className="mt-2 leading-7 text-stone-700">{copy}</p></div></div>
             ))}
           </div>

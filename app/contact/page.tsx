@@ -7,14 +7,14 @@ const contactEmail = "hello@foundforgedco.com";
 const phoneDisplay = "(937) 572-8109";
 
 export const metadata: Metadata = {
-  title: "Request a Free Gravel Driveway Estimate | Found & Forged",
-  description: "Request a free estimate for gravel driveway repair, grading, gravel spreading, potholes, culverts, and light tractor work in Miami County and nearby western Ohio communities.",
+  title: "Request a Free Property-Service Estimate | Found & Forged",
+  description: "Request a free estimate for garden-bed cleanup, mulching, junk removal, driveway work, grading, and light tractor services in Miami County and nearby western Ohio communities.",
   alternates: {
     canonical: "/contact"
   },
   openGraph: {
     title: "Request a Free Property-Service Estimate | Found & Forged",
-    description: "Send photos and project details for gravel driveway repair, grading, gravel spreading, box blade work, and property services.",
+    description: "Send photos and project details for garden-bed cleanup, mulching, junk removal, driveway work, and practical property services.",
     url: "/contact",
     type: "website"
   }
@@ -61,7 +61,7 @@ export default function ContactPage() {
                 {contactEmail}
               </a>
               <p className="mt-3 text-sm leading-7 text-forged-charcoal">
-                Include the service location, approximate driveway size, the problem you are seeing, and photos of the overall area and any potholes, ruts, culverts, or drainage concerns.
+                Include the service location, approximate project size, what you want completed, and photos showing the full work area, access, garden beds, unwanted items, driveway, or other concerns.
               </p>
             </div>
             <div className="panel p-5 sm:p-6">

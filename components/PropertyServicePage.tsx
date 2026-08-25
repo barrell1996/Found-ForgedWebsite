@@ -113,7 +113,7 @@ export function PropertyServicePage({
           <div>
             <p className="eyebrow">Suggested Photos</p>
             <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#15120f]">Send the photos that help quote the job.</h2>
-            <p className="mt-5 leading-8 text-stone-700">Clear photos reduce back-and-forth and help determine whether the job needs grading, gravel, drainage work, or a smaller maintenance visit.</p>
+            <p className="mt-5 leading-8 text-stone-700">Clear photos reduce back-and-forth and help determine the labor, access, material, disposal, equipment, and preparation the project may require.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {photos.map((photo) => (
@@ -154,7 +154,7 @@ export function PropertyServicePage({
       <section className="section-pad bg-white">
         <div className="container-tight border border-stone-200 bg-[#15120f] p-6 text-white">
           <h2 className="text-2xl font-black uppercase">Ready to look at the property?</h2>
-          <p className="mt-2 max-w-2xl text-stone-200">Send photos, location, and a short description of the problem. The fastest estimates start with clear driveway, culvert, gravel, and access photos.</p>
+          <p className="mt-2 max-w-2xl text-stone-200">Send photos, the service location, and a short description of what needs cleaned, removed, repaired, installed, or improved.</p>
           <Link href="/contact" className="button-secondary mt-5 border-white bg-white text-[#15120f] hover:bg-transparent hover:text-white">{ctaLabel}</Link>
         </div>
       </section>
